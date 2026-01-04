@@ -2,6 +2,12 @@
 
 Professional AI development company offering chatbots, deep learning models, computer vision systems, and full-stack AI solutions.
 
+## 🌐 Live Demo
+
+**🔗 Website**: [https://business-9yh3.onrender.com/](https://business-9yh3.onrender.com/)
+
+**🎥 Video Demo**: [Watch on YouTube](https://www.youtube.com/watch?v=cH5w_ED610k)
+
 ## 🚀 Features
 
 - ✨ **Modern React** with Vite for blazing-fast performance
