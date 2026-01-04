@@ -6,7 +6,11 @@ Professional AI development company offering chatbots, deep learning models, com
 
 **🔗 Website**: [https://business-9yh3.onrender.com/](https://business-9yh3.onrender.com/)
 
-**🎥 Video Demo**: [Watch on YouTube](https://www.youtube.com/watch?v=cH5w_ED610k)
+**🎥 Video Demo**: 
+
+[![Watch Demo Video](https://img.youtube.com/vi/cH5w_ED610k/maxresdefault.jpg)](https://www.youtube.com/watch?v=cH5w_ED610k)
+
+*Click the image above to watch the full demo on YouTube*
 
 ## 🚀 Features
 
