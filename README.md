@@ -1,103 +1,165 @@
-# AI Studio Pitch - Frontend Presentation
+# algsoch - AI Development Studio
 
-A professional, animated React frontend presentation for AI Data & Automation Execution Studio.
+Professional AI development company offering chatbots, deep learning models, computer vision systems, and full-stack AI solutions.
 
-## Features
+## 🚀 Features
 
-- ✨ **Modern React** with Vite for fast development
-- 🎨 **Tailwind CSS** for beautiful, responsive styling
-- 🎭 **Framer Motion** for smooth animations
-- 📱 **Fully Responsive** design
+- ✨ **Modern React** with Vite for blazing-fast performance
+- 🎨 **Tailwind CSS** with custom gradients and animations
+- 🎭 **Framer Motion** for smooth, professional animations
+- 🤖 **AI Chatbot** powered by Google Gemini 2.5 Flash
+- 📱 **Fully Responsive** design for all devices
+- 💬 **Discord Integration** for instant contact notifications
 - 🎯 **Interactive Navigation** with smooth scrolling
-- 📊 **Animated Diagrams** and visualizations
-- 🎪 **Professional Animations** throughout
+- 📊 **Real Portfolio** with 13+ live projects
 
-## Structure
+## 📁 Project Structure
 
 ```
 frontend-studio-pitch/
 ├── src/
 │   ├── components/
-│   │   ├── Navigation.jsx       # Top navigation bar
+│   │   ├── Navigation.jsx       # Responsive navbar
+│   │   ├── Hero.jsx             # Landing with service cards
+│   │   ├── Services.jsx         # Detailed service breakdown
+│   │   ├── Process.jsx          # 4-phase workflow
+│   │   ├── Technologies.jsx     # Tech stack showcase
+│   │   ├── Portfolio.jsx        # Real project showcase
+│   │   ├── Contact.jsx          # Contact form with Discord webhook
+│   │   ├── Chatbot.jsx          # AI sales agent chatbot
 │   │   ├── FloatingElements.jsx # Background animations
-│   │   ├── Hero.jsx             # Landing section
-│   │   ├── Identity.jsx         # Team identity
-│   │   ├── CoreInsight.jsx      # Why we exist
-│   │   ├── Services.jsx         # What we offer
-│   │   ├── ExecutionLoop.jsx    # How we work (5-phase flow)
-│   │   ├── SkillProof.jsx       # Skills mapped to work
-│   │   ├── CostPhilosophy.jsx   # Free tools strategy
-│   │   ├── FrontendThinking.jsx # UI as thinking tool
-│   │   ├── TheAsk.jsx           # What we're looking for
-│   │   └── Closing.jsx          # Final statement
+│   │   └── VisitorTracker.jsx   # Analytics integration
 │   ├── App.jsx                  # Main app component
 │   ├── main.jsx                 # Entry point
-│   └── index.css                # Global styles
-├── index.html
+│   └── index.css                # Global styles + Comic Sans font
+├── .env                         # Environment variables (not in git)
+├── .env.example                 # Example env file
+├── render.yaml                  # Render.com deployment config
 ├── package.json
 ├── vite.config.js
 ├── tailwind.config.js
 └── postcss.config.js
 ```
 
-## Installation & Setup
+## ⚙️ Installation & Setup
 
-1. Navigate to the project directory:
+1. **Clone the repository**:
 ```bash
-cd "/Users/viclkykumar/Library/CloudStorage/GoogleDrive-vickyiitbombay2@gmail.com/My Drive/business/frontend-studio-pitch"
+git clone https://github.com/algsoch/business.git
+cd business/frontend-studio-pitch
 ```
 
-2. Install dependencies:
+2. **Install dependencies**:
 ```bash
 npm install
 ```
 
-3. Start the development server:
+3. **Set up environment variables**:
+```bash
+cp .env.example .env
+```
+
+Edit `.env` and add your keys:
+```env
+VITE_DISCORD_WEBHOOK_URL=your_discord_webhook_url
+VITE_GEMINI_API_KEY=your_gemini_api_key
+```
+
+4. **Start development server**:
 ```bash
 npm run dev
 ```
 
-The app will open automatically at `http://localhost:3000`
+App runs at `http://localhost:3000`
 
-## Build for Production
+## 🏗️ Build for Production
 
 ```bash
 npm run build
 ```
 
-## Key Sections
+Build output goes to `dist/` folder.
 
-1. **Hero** - Eye-catching landing with key stats
-2. **Identity** - Clear definition of what we are
-3. **Core Insight** - Why AI systems fail and what's needed
-4. **Services** - Concrete offerings with clear boundaries
-5. **Execution Loop** - Interactive 5-phase process diagram
-6. **Skill Proof** - Direct mapping of experience to capabilities
-7. **Cost Philosophy** - Why we use free tools intentionally
-8. **Frontend Thinking** - UI as process visualization
-9. **The Ask** - Clear, limited requests
-10. **Closing** - Professional wrap-up with contact info
+## 🚢 Deploy to Render
 
-## Customization
+1. Push code to GitHub
+2. Go to [Render Dashboard](https://dashboard.render.com/)
+3. Create new **Static Site**
+4. Connect GitHub repo: `algsoch/business`
+5. Set root directory: `frontend-studio-pitch`
+6. Add environment variables in Render dashboard
+7. Deploy!
 
-- **Colors**: Edit `tailwind.config.js` to change the color scheme
-- **Content**: Update individual component files in `src/components/`
-- **Contact Info**: Add your details in `Closing.jsx`
-- **Animations**: Adjust Framer Motion settings in each component
+Auto-deploys from `render.yaml` config.
 
-## Technologies Used
+## 🎯 Key Features
 
-- React 18
-- Vite 5
-- Tailwind CSS 3
-- Framer Motion 10
-- Lucide React (icons)
+### AI Chatbot
+- Powered by Google Gemini 2.5 Flash
+- Acts as sales agent and AI consultant
+- Knows all services, pricing, portfolio
+- Persuasive personality with urgency messaging
+- Floating button with pulsing indicator
 
-## Performance Features
+### Discord Integration
+- Rich embed notifications for contact form
+- @everyone ping for immediate attention
+- Formatted fields with emojis
+- Bright orange color for visibility
 
-- Lazy loading animations
-- Optimized bundle size with Vite
-- Smooth scroll behavior
+### Responsive Design
+- Mobile-first approach
+- Granular breakpoints (sm, md, lg, xl)
+- Navbar adapts height, padding, text size
+- Service cards stack beautifully on mobile
+
+### Pricing & Discounts
+- 50% OFF launch offer across all services
+- Negotiable pricing badges
+- Range: ₹25k - ₹3.5L
+- Strikethrough original pricing
+
+## 🛠️ Technologies
+
+- **React 18.2.0** - UI framework
+- **Vite 5.0.2** - Build tool
+- **Tailwind CSS 3.3.5** - Styling
+- **Framer Motion 10.16.4** - Animations
+- **Lucide React** - Icons
+- **Google Gemini 2.5 Flash** - AI chatbot
+- **Discord Webhooks** - Notifications
+
+## 🎨 Customization
+
+### Colors
+Edit `tailwind.config.js` for color scheme changes.
+
+### Fonts
+Comic Sans used for "algsoch" branding via `.font-comic` class in `index.css`.
+
+### Content
+- **Services**: Edit `Services.jsx` and `Hero.jsx`
+- **Portfolio**: Update `Portfolio.jsx` with your projects
+- **Contact**: Change email/phone in `Contact.jsx` and `Chatbot.jsx`
+- **Pricing**: Adjust values in `Services.jsx` and `Hero.jsx`
+
+### Chatbot Personality
+Edit `SYSTEM_CONTEXT` in `Chatbot.jsx` to change:
+- Company info
+- Service descriptions
+- Sales approach
+- Tone and style
+
+## 📧 Contact
+
+- **Email**: npdimagine@gmail.com
+- **Phone**: +91 8383848219
+- **GitHub**: [@algsoch](https://github.com/algsoch)
+- **LinkedIn**: [algsoch](https://www.linkedin.com/in/algsoch/)
+
+## 📝 License
+
+Private repository - All rights reserved.
 - Responsive images and layouts
 - CSS animations with GPU acceleration
 
