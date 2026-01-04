@@ -1,267 +1,378 @@
 import { motion } from 'framer-motion'
-import { useInView } from 'framer-motion'
-import { useRef } from 'react'
-import { Brain, Database, Zap, MessageSquare, Image, FileText, Video, Gauge, Code, Layers, Tag } from 'lucide-react'
+import { Bot, Brain, Eye, Sparkles, Code, Workflow, MessageSquare, CheckCircle2 } from 'lucide-react'
 
 export default function Services() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, margin: "-100px" })
-
   const services = [
     {
+      icon: Bot,
+      title: "AI Chatbot Development",
+      tagline: "Automate customer support 24/7",
+      price: "₹25,000 - ₹75,000",
+      originalPrice: "₹50,000 - ₹1,50,000",
+      gradient: "from-orange-500 to-red-500",
+      steps: [
+        {
+          title: "Intent Training",
+          description: "We train your chatbot to understand customer queries in natural language",
+          examples: ["Product inquiries", "Order tracking", "FAQs automation", "Lead qualification"]
+        },
+        {
+          title: "Integration & Deployment",
+          description: "Connect to WhatsApp, Telegram, website—wherever your customers are",
+          examples: ["WhatsApp Business API", "Website widget", "Telegram bot", "Facebook Messenger"]
+        },
+        {
+          title: "Continuous Learning",
+          description: "Your bot gets smarter over time by learning from real conversations",
+          examples: ["Conversation analytics", "Auto-improvement", "Fallback handling", "Human handoff"]
+        },
+        {
+          title: "Analytics Dashboard",
+          description: "Track conversations, response accuracy, and customer satisfaction in real-time",
+          examples: ["Conversation logs", "Sentiment analysis", "Resolution rate", "User feedback"]
+        }
+      ]
+    },
+    {
+      icon: Workflow,
+      title: "AI Agents & Automation",
+      tagline: "Autonomous systems that handle tasks for you",
+      price: "₹40,000 - ₹1,25,000",
+      originalPrice: "₹80,000 - ₹2,50,000",
+      gradient: "from-cyan-500 to-blue-500",
+      steps: [
+        {
+          title: "Task Automation Design",
+          description: "We map your workflows and design AI agents that execute tasks autonomously",
+          examples: ["Email automation", "Data entry", "Document processing", "Calendar scheduling"]
+        },
+        {
+          title: "Tool Integration",
+          description: "Connect agents to your existing tools—CRM, email, databases, APIs",
+          examples: ["Zapier/Make integration", "Google Workspace", "Salesforce/HubSpot", "Slack/Teams"]
+        },
+        {
+          title: "Decision Logic",
+          description: "AI agents make smart decisions based on rules and machine learning",
+          examples: ["Conditional workflows", "Priority handling", "Exception detection", "Smart routing"]
+        },
+        {
+          title: "Monitoring & Alerts",
+          description: "Get notified when agents complete tasks or need human intervention",
+          examples: ["Real-time dashboards", "Error alerts", "Performance metrics", "Audit logs"]
+        }
+      ]
+    },
+    {
       icon: Brain,
-      title: 'Deep Learning & Computer Vision',
-      story: 'From medical imaging to product recognition',
-      color: 'from-blue-500 to-cyan-500',
-      bgGlow: 'bg-blue-500/10',
-      items: [
-        'CNN models: brain tumor detection, image classification, object recognition',
-        'PyTorch & TensorFlow training pipelines with GPU optimization',
-        'Transfer learning: ResNet, EfficientNet, BERT for fast deployment',
-        'Computer vision: object detection, semantic segmentation, face recognition',
-        'NLP systems: text classification, NER, sentiment analysis',
-        'Model fine-tuning and quantization for production',
+      title: "Deep Learning & Custom Models",
+      tagline: "Neural networks trained for your specific problem",
+      price: "₹60,000 - ₹1,75,000",
+      originalPrice: "₹1,20,000 - ₹3,50,000",
+      gradient: "from-green-500 to-emerald-500",
+      steps: [
+        {
+          title: "Data Preparation",
+          description: "We clean, label, and augment your data to train accurate models",
+          examples: ["Data cleaning", "Label annotation", "Augmentation pipelines", "Train/test splits"]
+        },
+        {
+          title: "Model Architecture",
+          description: "Custom neural networks designed for your problem—not generic templates",
+          examples: ["CNNs for images", "RNNs for sequences", "Transformers for NLP", "Hybrid architectures"]
+        },
+        {
+          title: "Training & Validation",
+          description: "GPU-accelerated training with validation until production-ready accuracy",
+          examples: ["Hyperparameter tuning", "Cross-validation", "Transfer learning", "Early stopping"]
+        },
+        {
+          title: "API Deployment",
+          description: "Models deployed as REST APIs, dockerized, and monitored",
+          examples: ["FastAPI endpoints", "Docker containers", "Model versioning", "A/B testing"]
+        }
       ]
     },
     {
-      icon: MessageSquare,
-      title: 'Chatbots & RAG Systems',
-      story: 'AI that actually talks to your customers',
-      color: 'from-purple-500 to-pink-500',
-      bgGlow: 'bg-purple-500/10',
-      items: [
-        'RAG chatbots over your private documents (PDFs, wikis, databases)',
-        'LangChain + vector databases (Pinecone, Qdrant, ChromaDB)',
-        'Customer support bots that know your products',
-        'Document Q&A: search through thousands of pages instantly',
-        'Dynamic prompt studios for testing and optimization',
-        'OpenAI, Anthropic, or open-source LLMs',
+      icon: Eye,
+      title: "Computer Vision Solutions",
+      tagline: "Image recognition & video analytics that see for you",
+      price: "₹45,000 - ₹1,40,000",
+      originalPrice: "₹90,000 - ₹2,80,000",
+      gradient: "from-violet-500 to-purple-500",
+      steps: [
+        {
+          title: "Problem Analysis",
+          description: "We understand what you need to detect, classify, or track in images/videos",
+          examples: ["Object detection", "Face recognition", "OCR (text extraction)", "Defect detection"]
+        },
+        {
+          title: "Model Training",
+          description: "Train vision models on your custom dataset for high accuracy",
+          examples: ["YOLO for detection", "ResNet for classification", "Tesseract for OCR", "Custom datasets"]
+        },
+        {
+          title: "Real-Time Processing",
+          description: "Process video streams or images in real-time with low latency",
+          examples: ["Live video analysis", "Batch image processing", "Edge deployment", "GPU optimization"]
+        },
+        {
+          title: "Integration & Alerts",
+          description: "Connect to cameras, apps, or systems with instant alerts",
+          examples: ["IP camera integration", "Mobile app SDK", "Email/SMS alerts", "Dashboard reporting"]
+        }
       ]
     },
     {
-      icon: Tag,
-      title: 'Data Annotation & Labeling',
-      story: 'High-quality labeled datasets for training',
-      color: 'from-green-500 to-emerald-500',
-      bgGlow: 'bg-green-500/10',
-      items: [
-        'Image annotation: bounding boxes, segmentation masks, keypoint detection',
-        'Text annotation: NER, intent classification, QA pairs, entity linking',
-        'Video annotation: object tracking, action recognition, temporal segmentation',
-        'Audio transcription and speaker identification',
-        'Custom annotation interfaces built for your specific needs',
-        'Quality assurance and inter-annotator agreement checks',
-      ]
-    },
-    {
-      icon: Database,
-      title: 'Web Scraping & Data Extraction',
-      story: 'Getting the raw data AI needs to learn',
-      color: 'from-orange-500 to-red-500',
-      bgGlow: 'bg-orange-500/10',
-      items: [
-        'Web scrapers: BeautifulSoup, Selenium, Scrapy for any website',
-        'API integration and data extraction from third-party services',
-        'PDF parsing and structured data extraction',
-        'Real-time data monitoring and automated collection',
-        'Data cleaning, deduplication, and validation',
-        'ETL pipelines: ingest → transform → validate → load',
-      ]
-    },
-    {
-      icon: Zap,
-      title: 'Backend APIs & Automation',
-      story: 'Serving predictions at scale',
-      color: 'from-yellow-500 to-orange-500',
-      bgGlow: 'bg-yellow-500/10',
-      items: [
-        'FastAPI backends serving ML model predictions',
-        'PostgreSQL, MongoDB, Redis for data storage and caching',
-        'Task queues (Celery, Redis) for async processing',
-        'Human-in-loop workflows: AI suggests, humans review, system learns',
-        'Webhook integrations and event-driven architectures',
-        'Rate limiting, authentication, and API security',
-      ]
-    },
-    {
-      icon: Gauge,
-      title: 'Monitoring & Dashboards',
-      story: 'See exactly what is happening in production',
-      color: 'from-cyan-500 to-blue-500',
-      bgGlow: 'bg-cyan-500/10',
-      items: [
-        'Real-time dashboards showing system health and metrics',
-        'Performance tracking: latency, throughput, error rates, costs',
-        'Model drift detection and automated retraining triggers',
-        'Admin panels for data management and output review',
-        'Alerting systems for failures and anomalies',
-        'Usage analytics and business metrics',
+      icon: Sparkles,
+      title: "Generative AI & RAG Systems",
+      tagline: "LLMs that understand and generate content for your business",
+      price: "₹50,000 - ₹1,50,000",
+      originalPrice: "₹1,00,000 - ₹3,00,000",
+      gradient: "from-pink-500 to-rose-500",
+      steps: [
+        {
+          title: "Knowledge Base Setup",
+          description: "Index your documents, PDFs, and data for semantic search",
+          examples: ["Document parsing", "Vector embeddings", "Pinecone/Weaviate setup", "Metadata tagging"]
+        },
+        {
+          title: "LLM Integration",
+          description: "Connect GPT-4, Claude, or open-source LLMs with fine-tuning if needed",
+          examples: ["OpenAI API", "Anthropic Claude", "Llama 3 fine-tuning", "Prompt engineering"]
+        },
+        {
+          title: "RAG Pipeline",
+          description: "Build retrieval systems that fetch context and generate accurate responses",
+          examples: ["Semantic search", "Context ranking", "Citation tracking", "Hallucination detection"]
+        },
+        {
+          title: "Production Deployment",
+          description: "Scalable APIs with caching, rate limiting, and cost optimization",
+          examples: ["Redis caching", "Token optimization", "Load balancing", "Usage analytics"]
+        }
       ]
     },
     {
       icon: Code,
-      title: 'Full-Stack Web Applications',
-      story: 'Complete systems from frontend to database',
-      color: 'from-pink-500 to-rose-500',
-      bgGlow: 'bg-pink-500/10',
-      items: [
-        'MERN stack: MongoDB, Express, React, Node.js',
-        'Salon booking systems, milestone trackers, poll APIs',
-        'React + Tailwind frontends with smooth animations',
-        'User authentication, role-based access control',
-        'Integration of AI features into existing apps',
-        'Responsive design for mobile, tablet, desktop',
+      title: "Backend & API Development",
+      tagline: "Scalable systems that power your AI applications",
+      price: "₹35,000 - ₹1,00,000",
+      originalPrice: "₹70,000 - ₹2,00,000",
+      gradient: "from-amber-500 to-yellow-500",
+      steps: [
+        {
+          title: "Architecture Design",
+          description: "We design scalable, maintainable backend systems for your needs",
+          examples: ["REST/GraphQL APIs", "Microservices", "Event-driven architecture", "Database design"]
+        },
+        {
+          title: "Core Implementation",
+          description: "Clean, tested code with proper error handling and security",
+          examples: ["FastAPI/Django", "PostgreSQL/MongoDB", "JWT authentication", "Input validation"]
+        },
+        {
+          title: "Performance Optimization",
+          description: "Database indexing, caching, and query optimization for speed",
+          examples: ["Redis caching", "Query optimization", "Connection pooling", "CDN integration"]
+        },
+        {
+          title: "DevOps & CI/CD",
+          description: "Docker, GitHub Actions, and cloud deployment for smooth releases",
+          examples: ["Docker containers", "GitHub Actions", "AWS/GCP deployment", "Monitoring setup"]
+        }
       ]
     },
     {
-      icon: Layers,
-      title: 'Deployment & MLOps',
-      story: 'From laptop to production servers',
-      color: 'from-indigo-500 to-purple-500',
-      bgGlow: 'bg-indigo-500/10',
-      items: [
-        'Docker containerization for all services',
-        'Deployment to Render, AWS, Heroku, or your cloud',
-        'CI/CD pipelines for automated testing and deployment',
-        'Model versioning and A/B testing frameworks',
-        'Load balancing and auto-scaling',
-        'Complete API documentation and testing suites',
+      icon: MessageSquare,
+      title: "Human-in-the-Loop Systems",
+      tagline: "AI suggests, humans decide—best of both worlds",
+      price: "₹42,500 - ₹1,10,000",
+      originalPrice: "₹85,000 - ₹2,20,000",
+      gradient: "from-teal-500 to-cyan-500",
+      steps: [
+        {
+          title: "Workflow Mapping",
+          description: "Identify where AI can assist without replacing human judgment",
+          examples: ["Task automation mapping", "Approval workflows", "Exception handling", "UI mockups"]
+        },
+        {
+          title: "AI Component Build",
+          description: "ML models or LLM agents that suggest, not decide",
+          examples: ["Document classification", "Smart pre-filling", "Anomaly detection", "Recommendations"]
+        },
+        {
+          title: "Review Interface",
+          description: "Intuitive dashboards for humans to review and approve AI suggestions",
+          examples: ["Admin panels", "Batch review tools", "Annotation interfaces", "Audit trails"]
+        },
+        {
+          title: "System Integration",
+          description: "Connect to your CRM, ERP, or existing tools seamlessly",
+          examples: ["API integrations", "Webhook triggers", "User training docs", "Performance tracking"]
+        }
       ]
-    },
+    }
   ]
 
   return (
-    <section id="services" className="relative py-24 border-t border-dark-800">
-      <div className="section-container" ref={ref}>
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : {}}
-          transition={{ duration: 0.6 }}
-          className="max-w-7xl mx-auto"
-        >
-          {/* Header */}
-          <div className="text-center mb-20">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={isInView ? { opacity: 1, scale: 1 } : {}}
-              transition={{ duration: 0.5 }}
-              className="inline-block px-4 py-2 bg-primary-500/10 border border-primary-500/30 rounded-full mb-6"
-            >
-              <span className="text-primary-400 font-semibold text-sm">8 Core Service Areas</span>
-            </motion.div>
-            <h2 className="text-4xl md:text-5xl font-bold mb-4">Everything We Actually Do</h2>
-            <p className="text-xl text-dark-300 max-w-3xl mx-auto">
-              Not vague promises. Real services from real projects we have shipped and are running in production right now.
-            </p>
-          </div>
+    <section id="services" className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-orange-500/20 to-transparent" />
+        <div className="absolute bottom-0 right-0 w-full h-full bg-gradient-to-tl from-cyan-500/20 to-transparent" />
+      </div>
 
-          {/* Services - Each with its own story */}
-          <div className="space-y-12">
-            {services.map((service, index) => (
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-12">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-12 sm:mb-16 lg:mb-20"
+        >
+          <motion.div
+            initial={{ scale: 0 }}
+            whileInView={{ scale: 1 }}
+            viewport={{ once: true }}
+            className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full mb-4 sm:mb-6 text-xs sm:text-sm"
+          >
+            <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
+            <span className="font-bold">Full Service Menu</span>
+          </motion.div>
+          
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4 sm:mb-6">
+            What We Build
+          </h2>
+          
+          <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4 mb-4">
+            From chatbots to computer vision—here's exactly how we work and what you get
+          </p>
+          
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-4 mt-4"
+          >
+            <div className="flex items-center space-x-2 bg-gradient-to-r from-green-500/20 to-emerald-500/20 border border-green-500 text-green-400 px-4 py-2 rounded-full text-sm font-bold">
+              <span>💡</span>
+              <span>Pricing negotiable for startups</span>
+            </div>
+            <div className="flex items-center space-x-2 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 border border-blue-500 text-blue-400 px-4 py-2 rounded-full text-sm font-bold">
+              <span>🚀</span>
+              <span>Bigger discounts for multiple services</span>
+            </div>
+          </motion.div>
+        </motion.div>
+
+        <div className="space-y-12 sm:space-y-16 lg:space-y-24">
+          {services.map((service, serviceIndex) => {
+            const Icon = service.icon
+            return (
               <motion.div
-                key={index}
+                key={serviceIndex}
                 initial={{ opacity: 0, y: 50 }}
-                animate={isInView ? { opacity: 1, y: 0 } : {}}
-                transition={{ duration: 0.7, delay: index * 0.15 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-100px" }}
+                transition={{ duration: 0.8 }}
                 className="relative"
               >
-                {/* Service Card */}
-                <motion.div
-                  whileHover={{ scale: 1.02, y: -5 }}
-                  className="card p-8 md:p-10 relative overflow-hidden group"
-                >
-                  {/* Animated glow effect */}
-                  <motion.div
-                    animate={{ 
-                      scale: [1, 1.3, 1],
-                      opacity: [0.05, 0.15, 0.05],
-                      rotate: [0, 90, 0]
-                    }}
-                    transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                    className={`absolute -top-20 -right-20 w-60 h-60 rounded-full bg-gradient-to-br ${service.color} blur-3xl ${service.bgGlow}`}
-                  />
-                  <motion.div
-                    animate={{ 
-                      scale: [1, 1.2, 1],
-                      opacity: [0.03, 0.1, 0.03],
-                      rotate: [0, -90, 0]
-                    }}
-                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-                    className={`absolute -bottom-20 -left-20 w-60 h-60 rounded-full bg-gradient-to-tl ${service.color} blur-3xl ${service.bgGlow}`}
-                  />
-
-                  <div className="relative z-10">
-                    <div className="flex flex-col md:flex-row md:items-start md:space-x-8">
-                      {/* Icon Section */}
-                      <motion.div
-                        whileHover={{ rotate: [0, -10, 10, -10, 0], scale: 1.1 }}
-                        transition={{ duration: 0.5 }}
-                        className="flex-shrink-0 mb-6 md:mb-0"
-                      >
-                        <div className={`w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center shadow-lg`}>
-                          {(() => {
-                            const Icon = service.icon
-                            return <Icon className="w-10 h-10 md:w-12 md:h-12 text-white" />
-                          })()}
+                <div className="bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-gray-700 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 hover:border-orange-500 transition-all duration-300">
+                  <div className="flex flex-col sm:flex-row items-start space-y-4 sm:space-y-0 sm:space-x-6 mb-8 sm:mb-10">
+                    <div className={`flex-shrink-0 w-14 h-14 sm:w-16 sm:h-16 lg:w-20 lg:h-20 rounded-xl sm:rounded-2xl bg-gradient-to-br ${service.gradient} flex items-center justify-center shadow-xl`}>
+                      <Icon className="w-7 h-7 sm:w-8 sm:h-8 lg:w-10 lg:h-10 text-white" />
+                    </div>
+                    
+                    <div className="flex-grow">
+                      <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-3">
+                        {service.title}
+                      </h3>
+                      <p className="text-base sm:text-lg lg:text-xl text-gray-300 mb-3 sm:mb-4">
+                        {service.tagline}
+                      </p>
+                      <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                        <div className="flex flex-col sm:flex-row sm:items-baseline gap-2">
+                          <span className={`text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent`}>
+                            {service.price}
+                          </span>
+                          {service.originalPrice && (
+                            <span className="text-sm sm:text-base text-gray-500 line-through">
+                              {service.originalPrice}
+                            </span>
+                          )}
                         </div>
-                      </motion.div>
-
-                      {/* Content Section */}
-                      <div className="flex-1">
-                        <motion.div
-                          initial={{ opacity: 0, x: -20 }}
-                          animate={isInView ? { opacity: 1, x: 0 } : {}}
-                          transition={{ duration: 0.5, delay: index * 0.15 + 0.2 }}
-                        >
-                          <h3 className="text-2xl md:text-3xl font-bold mb-2">{service.title}</h3>
-                          <p className={`text-lg bg-gradient-to-r ${service.color} bg-clip-text text-transparent font-semibold mb-6`}>
-                            {service.story}
-                          </p>
-                        </motion.div>
-
-                        {/* Items Grid */}
-                        <div className="grid sm:grid-cols-2 gap-x-6 gap-y-3">
-                          {service.items.map((item, i) => (
-                            <motion.div
-                              key={i}
-                              initial={{ opacity: 0, x: -10 }}
-                              animate={isInView ? { opacity: 1, x: 0 } : {}}
-                              transition={{ duration: 0.3, delay: index * 0.15 + 0.3 + i * 0.05 }}
-                              whileHover={{ x: 5, color: '#60a5fa' }}
-                              className="flex items-start space-x-3 text-dark-200 group/item"
-                            >
-                              <motion.span 
-                                whileHover={{ scale: 1.5, rotate: 90 }}
-                                className={`text-lg bg-gradient-to-r ${service.color} bg-clip-text text-transparent font-bold mt-0.5`}
-                              >
-                                ▸
-                              </motion.span>
-                              <span className="text-sm md:text-base group-hover/item:text-primary-400 transition-colors">{item}</span>
-                            </motion.div>
-                          ))}
-                        </div>
+                        {service.originalPrice && (
+                          <span className="inline-block bg-red-500/20 border border-red-500 text-red-400 px-2 sm:px-3 py-1 rounded-full text-xs font-bold">
+                            50% OFF
+                          </span>
+                        )}
                       </div>
                     </div>
                   </div>
-                </motion.div>
+
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8">
+                    {service.steps.map((step, stepIndex) => (
+                      <motion.div
+                        key={stepIndex}
+                        initial={{ opacity: 0, x: -20 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: stepIndex * 0.1 }}
+                        className="bg-black/50 border border-gray-700 rounded-xl p-5 sm:p-6 hover:border-orange-500/50 transition-all duration-300"
+                      >
+                        <div className="flex items-center space-x-3 mb-3 sm:mb-4">
+                          <div className={`flex-shrink-0 w-8 h-8 sm:w-10 sm:h-10 rounded-lg bg-gradient-to-br ${service.gradient} text-white flex items-center justify-center font-black text-sm sm:text-base`}>
+                            {stepIndex + 1}
+                          </div>
+                          <h4 className="text-base sm:text-lg font-bold text-white">
+                            {step.title}
+                          </h4>
+                        </div>
+                        
+                        <p className="text-sm sm:text-base text-gray-300 mb-3 sm:mb-4 leading-relaxed">
+                          {step.description}
+                        </p>
+                        
+                        <div className="space-y-2">
+                          {step.examples.map((example, exampleIndex) => (
+                            <div key={exampleIndex} className="flex items-start space-x-2">
+                              <CheckCircle2 className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                              <span className="text-xs sm:text-sm text-gray-400">{example}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    ))}
+                  </div>
+                </div>
               </motion.div>
-            ))}
-          </div>
+            )
+          })}
+        </div>
 
-          {/* Bottom Message */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.6, delay: 1.5 }}
-            className="text-center mt-16 px-4"
-          >
-            <p className="text-xl md:text-2xl text-dark-200 font-medium">
-              Every service listed here? <span className="text-primary-400 font-bold">We have actually built and deployed it.</span>
-              <br/>
-              <span className="text-dark-400 text-lg mt-2 block">Not theory. Not plans. Running code serving real users.</span>
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          className="mt-12 sm:mt-16 lg:mt-20 text-center"
+        >
+          <div className="inline-block bg-gradient-to-r from-orange-500/20 to-red-500/20 border-2 border-orange-500 rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 max-w-2xl">
+            <h3 className="text-xl sm:text-2xl lg:text-3xl font-black text-white mb-3 sm:mb-4">
+              Need Something Custom?
+            </h3>
+            <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 px-4">
+              Every business is different. Tell us your problem, and we'll build the perfect AI solution for you.
             </p>
-          </motion.div>
-
+            <a
+              href="#contact"
+              className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl font-bold text-sm sm:text-base hover:shadow-2xl hover:scale-105 transition-all duration-300"
+            >
+              <span>Get Custom Quote</span>
+              <motion.span whileHover={{ x: 5 }}>→</motion.span>
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

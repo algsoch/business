@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&family=Comic+Neue:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,34 +6,42 @@
 
 @layer base {
   body {
-    @apply bg-dark-900 text-dark-50 antialiased;
+    @apply bg-white text-neutral-900 antialiased;
     font-family: 'Inter', system-ui, sans-serif;
   }
   
   * {
     @apply scroll-smooth;
   }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, sans-serif;
+  }
+  
+  .font-comic {
+    font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive !important;
+  }
 }
 
 @layer components {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-24;
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent;
   }
   
   .card {
-    @apply bg-dark-800/50 backdrop-blur-sm border border-dark-700 rounded-xl p-4 sm:p-6 hover:border-primary-500/50 transition-all duration-300;
+    @apply bg-white border border-neutral-200 rounded-xl p-6 sm:p-8 hover:border-primary-300 hover:shadow-xl transition-all duration-300;
   }
   
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg hover:shadow-primary-500/50 text-sm sm:text-base;
+    @apply bg-primary-600 hover:bg-primary-700 text-white font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg transition-all duration-200 hover:shadow-lg text-sm sm:text-base;
   }
   
   .btn-secondary {
-    @apply bg-dark-700 hover:bg-dark-600 text-dark-50 font-semibold px-4 sm:px-6 py-2.5 sm:py-3 rounded-lg border border-dark-600 transition-all duration-300 transform hover:scale-105 text-sm sm:text-base;
+    @apply bg-white hover:bg-neutral-50 text-primary-600 font-semibold px-6 sm:px-8 py-3 sm:py-4 rounded-lg border-2 border-primary-600 transition-all duration-200 text-sm sm:text-base;
   }
   
   /* Smooth entrance animations */
@@ -81,19 +89,19 @@
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar - Professional style */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-dark-900;
+  @apply bg-neutral-100;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-dark-700 rounded-full;
+  @apply bg-neutral-400 hover:bg-neutral-500 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-dark-600;
+  @apply bg-neutral-500;
 }
