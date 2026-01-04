@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: algsoch-website
+    runtime: node
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 18.18.0
+      - key: VITE_DISCORD_WEBHOOK_URL
+        sync: false
+      - key: VITE_GEMINI_API_KEY
+        sync: false
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: SAMEORIGIN
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: X-XSS-Protection
+        value: 1; mode=block
