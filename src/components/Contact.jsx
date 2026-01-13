@@ -38,58 +38,66 @@ export default function Contact() {
 
       // Build stunning Discord message
       const payload = {
-        content: `@everyone`,
+        content: `@everyone 🚨 **HOT LEAD ALERT** 🚨`,
         embeds: [{
           author: {
-            name: '🚀 NEW CONTACT FROM ALGSOCH WEBSITE',
-            icon_url: 'https://cdn.discordapp.com/emojis/1234567890123456789.png'
+            name: '⚡ NEW CLIENT INQUIRY • algsoch (polybazar)',
+            icon_url: 'https://em-content.zobj.net/thumbs/120/apple/354/rocket_1f680.png'
           },
-          title: `💼 ${formData.name || 'Anonymous'} wants to work with you!`,
-          description: `**━━━━━━━━━━━━━━━━━━━━━━━━━━━━**\n\n${formData.message ? `> 💬 **${formData.message}**` : '*No message provided*'}\n\n**━━━━━━━━━━━━━━━━━━━━━━━━━━━━**`,
-          color: 16744192, // Bright orange
+          title: `🤝 ${formData.name || 'Potential Client'} is ready to partner!`,
+          description: `> ${formData.message ? `💬 *"${formData.message}"*` : '💭 *Awaiting discussion details*'}\n\n**━━━━━━━━━━━━━━━━━━━━━━━━━━**`,
+          color: 16744192, // Bright orange (#FF6B00)
           fields: [
             {
-              name: '👤 CLIENT NAME',
-              value: `\`\`\`\n${formData.name || 'Not provided'}\n\`\`\``,
+              name: '👤 Contact Name',
+              value: `**${formData.name || 'Not provided'}**`,
               inline: true
             },
             {
-              name: '📧 EMAIL ADDRESS',
-              value: `\`\`\`\n${formData.email || 'Not provided'}\n\`\`\``,
+              name: '🏢 Company',
+              value: `**${formData.company || 'Individual/Startup'}**`,
               inline: true
             },
             {
-              name: '🏢 COMPANY',
-              value: `\`\`\`\n${formData.company || 'Not provided'}\n\`\`\``,
+              name: '\u200b',
+              value: '\u200b',
               inline: true
             },
             {
-              name: '🎯 INTERESTED SERVICE',
-              value: `**${serviceName}**`,
+              name: '📧 Email',
+              value: `[${formData.email || 'Not provided'}](mailto:${formData.email})`,
               inline: false
             },
             {
-              name: '💰 PROJECT VALUE',
-              value: '```\n₹25,000 - ₹3,50,000 (50% OFF)\n```',
+              name: '🎯 Interested Service',
+              value: `> ${serviceName}`,
+              inline: false
+            },
+            {
+              name: '⚡ Action Required',
+              value: '```diff\n+ Respond within 2 hours for best conversion\n+ Setup discovery call ASAP\n+ Share portfolio & process timeline\n```',
+              inline: false
+            },
+            {
+              name: '🤝 Partnership Info',
+              value: '✅ GST Registered (Polybazar)\n✅ 16+ Production Systems\n✅ 100% Deployment Track Record\n✅ 30-Day Free Support',
               inline: true
             },
             {
-              name: '⚡ PRIORITY',
-              value: '```\nHIGH - Respond ASAP!\n```',
-              inline: true
-            },
-            {
-              name: '📍 SOURCE',
-              value: '```\nalgsoch.com\n```',
+              name: '📍 Lead Source',
+              value: '🌐 algsoch.com\n📅 ' + new Date().toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' }),
               inline: true
             }
           ],
           thumbnail: {
             url: 'https://em-content.zobj.net/thumbs/120/apple/354/fire_1f525.png'
           },
+          image: {
+            url: 'https://em-content.zobj.net/thumbs/240/apple/354/handshake_1f91d.png'
+          },
           footer: {
-            text: '🔥 algsoch Contact System • Strike while hot!',
-            icon_url: 'https://em-content.zobj.net/thumbs/120/apple/354/rocket_1f680.png'
+            text: '🔥 algsoch (polybazar) • GST Registered AI Solutions Provider',
+            icon_url: 'https://em-content.zobj.net/thumbs/120/apple/354/gear_2699-fe0f.png'
           },
           timestamp: new Date().toISOString()
         }]
