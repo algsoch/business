@@ -5,40 +5,32 @@ export default function Hero() {
   const services = [
     {
       icon: "🤖",
-      title: "AI Chatbots",
-      tagline: "WhatsApp, Telegram, website support",
-      price: "₹25,000+",
-      originalPrice: "₹50,000+",
+      title: "AI Agents",
+      tagline: "Autonomous systems that research, decide, and execute multi-step tasks with tool integration",
+      gradient: "from-purple-500 via-violet-500 to-fuchsia-500"
+    },
+    {
+      icon: "💬",
+      title: "Chatbot Business",
+      tagline: "Custom business chatbots for WhatsApp, Telegram, websites - automate customer support & sales",
       gradient: "from-orange-500 via-red-500 to-pink-500"
     },
     {
       icon: "💻",
-      title: "Full-Stack Web Apps",
-      tagline: "React + FastAPI production systems",
-      price: "₹35,000+",
-      originalPrice: "₹70,000+",
+      title: "Full-Stack Development",
+      tagline: "End-to-end SaaS platforms, web applications, REST APIs with React & Python",
       gradient: "from-cyan-500 via-blue-500 to-purple-500"
     },
     {
       icon: "🧠",
-      title: "Deep Learning Models",
-      tagline: "Custom neural networks that work",
-      price: "₹60,000+",
-      originalPrice: "₹1,20,000+",
+      title: "ML & Deep Learning",
+      tagline: "Custom neural networks, NLP pipelines, computer vision, predictive models",
       gradient: "from-green-500 via-emerald-500 to-teal-500"
-    },
-    {
-      icon: "👁️",
-      title: "Computer Vision",
-      tagline: "Object detection, OCR, analytics",
-      price: "₹45,000+",
-      originalPrice: "₹90,000+",
-      gradient: "from-violet-500 via-purple-500 to-fuchsia-500"
     }
   ]
 
   return (
-    <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900">
+    <section id="hero" className="relative flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-900 pt-20 pb-8 min-h-screen">
       {/* Animated gradient orbs */}
       <motion.div
         animate={{
@@ -65,42 +57,55 @@ export default function Hero() {
         className="absolute bottom-1/4 right-1/4 w-72 h-72 sm:w-96 sm:h-96 bg-gradient-to-r from-cyan-500/30 to-blue-500/30 rounded-full blur-3xl"
       />
 
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-12 sm:py-20">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 py-8 sm:py-12">
         
-        <motion.div
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center mb-12 sm:mb-20"
-        >
-          <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 sm:mb-8 leading-tight">
-            <motion.span 
-              initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: 0.4 }}
-              className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent block font-comic"
-            >
-              algsoch
-            </motion.span>
-          </h1>
+        {/* Main Hero Box with Border and Shadow */}
+        <div className="max-w-5xl mx-auto bg-black/40 backdrop-blur-sm border-2 border-gray-700 rounded-3xl p-8 sm:p-10 md:p-12 shadow-[0_0_80px_rgba(0,0,0,0.8)]">
           
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.6 }}
-            className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 sm:mb-6 px-4"
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-6 sm:mb-8"
           >
-            AI • Full-Stack • Open Source
-          </motion.p>
-          
-          <motion.p 
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.8 }}
-            className="text-base sm:text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed px-4"
-          >
-            Chatbots • AI Agents • Computer Vision • RAG Systems • React/FastAPI Apps • Backend APIs • Open Source Contributor
-          </motion.p>
+            {/* Name with subscript polybazar */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-black mb-4 sm:mb-6 leading-none">
+              <span className="bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 bg-clip-text text-transparent font-comic inline-block">
+                algsoch
+              </span>
+              <sub className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-400 ml-2 align-sub">(polybazar)</sub>
+            </h1>
+            
+            {/* Tagline Box */}
+            <div className="inline-block bg-gradient-to-r from-orange-500/20 to-red-500/20 border-2 border-orange-500 rounded-2xl px-6 sm:px-8 py-3 sm:py-4 mb-6 shadow-lg shadow-orange-500/20">
+              <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black text-white">
+                AI-Powered Software Development
+              </p>
+            </div>
+            
+            {/* Services Grid */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 mt-8">
+              <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-3 shadow-md">
+                <p className="text-sm sm:text-base font-bold text-white">Full-Stack Web Development</p>
+              </div>
+              <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-3 shadow-md">
+                <p className="text-sm sm:text-base font-bold text-white">AI Chatbots & Agents</p>
+              </div>
+              <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-3 shadow-md">
+                <p className="text-sm sm:text-base font-bold text-white">Generative AI & RAG</p>
+              </div>
+              <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-3 shadow-md">
+                <p className="text-sm sm:text-base font-bold text-white">Custom ML Models</p>
+              </div>
+              <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-3 shadow-md">
+                <p className="text-sm sm:text-base font-bold text-white">Computer Vision</p>
+              </div>
+              <div className="bg-gray-800/50 border border-gray-700 rounded-xl p-3 shadow-md">
+                <p className="text-sm sm:text-base font-bold text-white">Data Pipelines</p>
+              </div>
+            </div>
+
+          </motion.div>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -131,84 +136,66 @@ export default function Hero() {
               <span>LinkedIn Profile</span>
             </a>
           </motion.div>
-        </motion.div>
+          
+        </div>
+        {/* End Main Hero Box */}
 
-        {/* Launch Offer Banner */}
+        {/* Company Motive */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 1.2 }}
-          className="mb-8 px-4 sm:px-0"
+          className="mb-6 px-4 sm:px-0 mt-8"
         >
-          <div className="bg-gradient-to-r from-red-600 via-orange-500 to-red-600 rounded-2xl p-4 sm:p-6 shadow-2xl border-2 border-orange-400/50">
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-3">
-              <div className="flex items-center space-x-3">
-                <motion.div
-                  animate={{ rotate: [0, 15, -15, 0] }}
-                  transition={{ duration: 0.5, repeat: Infinity, repeatDelay: 2 }}
-                >
-                  <Tag className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
-                </motion.div>
-                <div className="text-center sm:text-left">
-                  <div className="text-white font-black text-lg sm:text-2xl">🎉 50% OFF Launch Offer!</div>
-                  <div className="text-orange-100 text-xs sm:text-sm font-semibold"> Limited time offer</div>
-                </div>
+          <div className="max-w-4xl mx-auto bg-black/40 backdrop-blur-sm border-2 border-gray-700 rounded-3xl p-6 sm:p-8 shadow-[0_0_80px_rgba(0,0,0,0.8)]">
+            <div className="flex flex-col items-center text-center space-y-3">
+              <div className="flex items-center space-x-2">
+                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500" />
+                <h3 className="text-lg sm:text-xl md:text-2xl font-black text-white">Our Mission</h3>
+                <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 text-orange-500" />
               </div>
-              <div className="flex items-center space-x-2 bg-white/20 backdrop-blur px-4 py-2 rounded-full">
-                <Sparkles className="w-5 h-5 text-yellow-300" />
-                <span className="text-white font-bold text-sm sm:text-base">algsoch</span>
-                <Zap className="w-5 h-5 text-yellow-300" />
+              <p className="text-sm sm:text-base md:text-lg text-gray-300 leading-relaxed max-w-3xl">
+                Building production-ready AI systems that solve real business problems. No buzzwords, no hype—just reliable, deployed solutions that work 24/7.
+              </p>
+              <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mt-2">
+                <span className="px-2 sm:px-3 py-1.5 bg-orange-500/20 border border-orange-500 text-orange-400 rounded-full text-[10px] sm:text-xs font-bold">
+                  💼 Enterprise-Grade
+                </span>
+                <span className="px-2 sm:px-3 py-1.5 bg-blue-500/20 border border-blue-500 text-blue-400 rounded-full text-[10px] sm:text-xs font-bold">
+                  🚀 Production-First
+                </span>
+                <span className="px-2 sm:px-3 py-1.5 bg-green-500/20 border border-green-500 text-green-400 rounded-full text-[10px] sm:text-xs font-bold">
+                  ⚡ Real-World Tested
+                </span>
               </div>
             </div>
           </div>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-12 sm:mb-16 px-4 sm:px-0">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-8 px-4 sm:px-0">
           {services.map((service, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 + index * 0.1 }}
-              whileHover={{ scale: 1.05, y: -10 }}
-              className="group relative bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-gray-700 rounded-2xl p-6 sm:p-8 hover:border-orange-500 transition-all duration-300 cursor-pointer"
+              whileHover={{ scale: 1.02, y: -5 }}
+              className="group relative bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-gray-700 rounded-xl p-4 sm:p-5 hover:border-orange-500 transition-all duration-300 cursor-pointer"
             >
-              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-20 rounded-2xl transition-opacity duration-300`} />
+              <div className={`absolute inset-0 bg-gradient-to-br ${service.gradient} opacity-0 group-hover:opacity-20 rounded-xl transition-opacity duration-300`} />
               
               <div className="relative z-10">
-                <div className="text-4xl sm:text-5xl md:text-6xl mb-4 sm:mb-6">
+                <div className="text-3xl sm:text-4xl mb-3">
                   {service.icon}
                 </div>
                 
-                <h3 className="text-xl sm:text-2xl font-bold text-white mb-2 sm:mb-3">
+                <h3 className="text-lg sm:text-xl font-bold text-white mb-2">
                   {service.title}
                 </h3>
                 
-                <p className="text-sm sm:text-base text-gray-300 mb-4 sm:mb-6 min-h-[40px] sm:min-h-[48px]">
+                <p className="text-xs sm:text-sm text-gray-300 leading-relaxed">
                   {service.tagline}
                 </p>
-                
-                <div className="space-y-2 mb-4">
-                  <div className="flex items-baseline space-x-2 flex-wrap">
-                    <span className={`text-xl sm:text-2xl lg:text-3xl font-black bg-gradient-to-r ${service.gradient} bg-clip-text text-transparent whitespace-nowrap`}>
-                      {service.price}
-                    </span>
-                    <span className="text-xs sm:text-sm text-gray-500 line-through whitespace-nowrap">
-                      {service.originalPrice}
-                    </span>
-                  </div>
-                  <div className="inline-block bg-red-500/20 border border-red-500 text-red-400 px-3 py-1 rounded-full text-xs font-bold">
-                    50% OFF
-                  </div>
-                </div>
-                
-                <motion.div
-                  whileHover={{ x: 5 }}
-                  className="inline-flex items-center space-x-2 text-sm font-medium text-orange-400 group-hover:text-orange-300"
-                >
-                  <span>Learn More</span>
-                  <ArrowRight className="w-4 h-4" />
-                </motion.div>
               </div>
             </motion.div>
           ))}
@@ -227,16 +214,58 @@ export default function Hero() {
             <Rocket className="w-5 h-5 sm:w-6 sm:h-6" />
             <span>View All Services</span>
           </a>
-          
-          <p className="text-xs sm:text-sm text-gray-400 mt-4 sm:mt-6">
-            🎁 Limited time offer • First 10 clients only • Ends soon!
-          </p>
+        </motion.div>
+
+        {/* Trust Badges - Partnership & Stats */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 1.3 }}
+          className="mt-8 sm:mt-12 px-4"
+        >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
+            <motion.div
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-orange-500 rounded-xl p-3 sm:p-4 text-center hover:shadow-[0_0_30px_rgba(249,115,22,0.3)] transition-all duration-300"
+            >
+              <div className="text-3xl sm:text-4xl mb-2">🤝</div>
+              <h3 className="text-base sm:text-lg font-bold text-white mb-1">Partnership</h3>
+              <p className="text-xs sm:text-sm text-gray-300">Polybazar (GST Registered)</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-blue-500 rounded-xl p-3 sm:p-4 text-center hover:shadow-[0_0_30px_rgba(59,130,246,0.3)] transition-all duration-300"
+            >
+              <div className="text-3xl sm:text-4xl mb-2">🚀</div>
+              <h3 className="text-base sm:text-lg font-bold text-white mb-1">16+ Production</h3>
+              <p className="text-xs sm:text-sm text-gray-300">Systems Deployed</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-green-500 rounded-xl p-3 sm:p-4 text-center hover:shadow-[0_0_30px_rgba(34,197,94,0.3)] transition-all duration-300"
+            >
+              <div className="text-3xl sm:text-4xl mb-2">✅</div>
+              <h3 className="text-base sm:text-lg font-bold text-white mb-1">100% Deployed</h3>
+              <p className="text-xs sm:text-sm text-gray-300">Real-World Solutions</p>
+            </motion.div>
+
+            <motion.div
+              whileHover={{ scale: 1.05, y: -5 }}
+              className="bg-gradient-to-br from-gray-800 to-gray-900 border-2 border-purple-500 rounded-xl p-3 sm:p-4 text-center hover:shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all duration-300"
+            >
+              <div className="text-3xl sm:text-4xl mb-2">💬</div>
+              <h3 className="text-base sm:text-lg font-bold text-white mb-1">24/7 Support</h3>
+              <p className="text-xs sm:text-sm text-gray-300">Always Available</p>
+            </motion.div>
+          </div>
         </motion.div>
 
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 1.4 }}
+          transition={{ delay: 1.5 }}
           className="mt-12 sm:mt-20 flex flex-wrap items-center justify-center gap-3 sm:gap-4 text-xs sm:text-sm text-gray-400 px-4"
         >
           <span className="font-bold text-orange-400">Tech Stack:</span>

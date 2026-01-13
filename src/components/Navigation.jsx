@@ -8,6 +8,7 @@ const navItems = [
   { id: 'process', label: 'Our Process' },
   { id: 'technologies', label: 'Technologies' },
   { id: 'portfolio', label: 'Portfolio' },
+  { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' },
 ]
 
@@ -36,11 +37,13 @@ export default function Navigation({ activeSection }) {
             className="flex items-center space-x-1.5 sm:space-x-2 md:space-x-3 cursor-pointer flex-shrink-0"
             onClick={() => scrollToSection('hero')}
           >
-            <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center shadow-lg">
-              <Code2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 md:w-4.5 md:h-4.5 lg:w-5 lg:h-5 text-white" />
+            <div className="w-7 h-7 sm:w-8 sm:h-8 md:w-9 md:h-9 lg:w-10 lg:h-10 bg-gradient-to-br from-orange-500 to-red-500 rounded-lg flex items-center justify-center shadow-lg p-0.5">
+              <img src="/logo.jpg" alt="algsoch logo" className="w-full h-full object-cover rounded-md" />
             </div>
             <div className="flex flex-col">
-              <div className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent font-black text-base sm:text-lg md:text-xl leading-none font-comic">algsoch</div>
+              <div className="bg-gradient-to-r from-orange-400 to-red-400 bg-clip-text text-transparent font-black text-base sm:text-lg md:text-xl leading-none font-comic">
+                algsoch<sub className="text-xs sm:text-sm text-gray-400">(polybazar)</sub>
+              </div>
               <div className="text-gray-400 text-[9px] sm:text-[10px] md:text-xs font-bold hidden xs:block">AI That Works</div>
             </div>
           </motion.div>

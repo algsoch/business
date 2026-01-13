@@ -92,6 +92,39 @@ export default function Portfolio() {
       stars: 0
     },
     {
+      title: "System Monitor Dashboard",
+      category: "DevOps & Monitoring",
+      description: "Real-time system monitoring tool tracking CPU, memory, disk usage, and network performance. Live metrics and alerts.",
+      tech: ["Python", "FastAPI", "React", "WebSockets"],
+      gradient: "from-blue-500 to-indigo-500",
+      icon: "📊",
+      link: "https://github.com/algsoch/monitor",
+      homepage: "https://github.com/algsoch/monitor",
+      stars: 0
+    },
+    {
+      title: "AI Job Application Agent",
+      category: "Agentic AI & Automation",
+      description: "Autonomous AI agent that searches, filters, and applies to job postings automatically. Multi-platform job board integration.",
+      tech: ["Python", "LangChain", "Selenium", "OpenAI"],
+      gradient: "from-purple-500 to-pink-500",
+      icon: "🎯",
+      link: "https://github.com/algsoch/job_agentic",
+      homepage: "https://github.com/algsoch/job_agentic",
+      stars: 0
+    },
+    {
+      title: "Folder Structure Validator",
+      category: "DevOps & Automation",
+      description: "Automated tool to check and validate folder structures against predefined templates. Essential for project standardization.",
+      tech: ["Python", "CLI", "JSON", "Automation"],
+      gradient: "from-emerald-500 to-teal-500",
+      icon: "📁",
+      link: "https://github.com/algsoch/folder_checker",
+      homepage: "https://github.com/algsoch/folder_checker",
+      stars: 0
+    },
+    {
       title: "Video Portfolio Website",
       category: "Frontend & Design",
       description: "Professional video portfolio website with modern design. Built for videographer client.",
@@ -146,7 +179,7 @@ export default function Portfolio() {
   ]
 
   return (
-    <section id="portfolio" className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
+    <section id="portfolio" className="relative py-8 sm:py-10 lg:py-12 bg-gradient-to-br from-black via-gray-900 to-black overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-3xl" />
         <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-tl from-orange-500 to-red-500 rounded-full blur-3xl" />
@@ -167,15 +200,15 @@ export default function Portfolio() {
             className="inline-flex items-center space-x-2 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full mb-4 sm:mb-6 text-xs sm:text-sm"
           >
             <Sparkles className="w-3 h-3 sm:w-4 sm:h-4" />
-            <span className="font-bold">Production Projects</span>
+            <span className="font-bold">16+ PRODUCTION PROJECTS • 100% REAL</span>
           </motion.div>
           
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-white mb-4 sm:mb-6">
-            Our Portfolio
+            Proof, Not Promises
           </h2>
           
           <p className="text-base sm:text-lg md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed px-4">
-            Real projects from my GitHub—AI systems, web apps, automation tools, all deployed and working
+            Every project below is live, deployed, and solving real problems. No mockups, no demos—just production-grade AI and web systems built from scratch.
           </p>
         </motion.div>
 

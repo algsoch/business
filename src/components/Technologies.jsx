@@ -93,7 +93,7 @@ export default function Technologies() {
   }
 
   return (
-    <section id="technologies" className="relative py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
+    <section id="technologies" className="relative py-8 sm:py-10 lg:py-12 bg-gradient-to-br from-gray-900 via-black to-gray-900 overflow-hidden">
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-0 left-0 w-96 h-96 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full blur-3xl" />
         <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-cyan-500 to-blue-500 rounded-full blur-3xl" />
